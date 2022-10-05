@@ -31,6 +31,7 @@ namespace LoggingKata
             ITrackable location1 = null;
             ITrackable location2 = null;
             double distance;
+
             GeoPosition(location1, location2);
         }
     }

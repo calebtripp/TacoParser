@@ -1,4 +1,7 @@
-﻿namespace LoggingKata
+﻿using Microsoft.VisualBasic;
+using System.Reflection.PortableExecutable;
+
+namespace LoggingKata
 {
     /// <summary>
     /// Parses a POI file to locate all the Taco Bells
@@ -22,17 +25,33 @@
 
             var latitude = double.Parse(cells[0]);
             var longitude = double.Parse(cells[1]);   
-            var name = cells[2];    
-           
+            var name = cells[2];
 
-            
-            // You'll need to create a TacoBell class
-            // that conforms to ITrackable
+            // that conforms to ITrackable HAS MEMBERS PRESENT WITH PLACEHOLDERS ONLY
 
             // Then, you'll need an instance of the TacoBell class
+         var tBClass = new TacoBell();
+            tBClass.Name = name;
+            tBClass.Location = (longitude,latitude); 
+            Var iInst = new ITrackable();
+
+            var ITrackable.Name = name;
+
+
+
+            //these work, but why can't I bring in the properties/fields of the others??
+            var yo = new Point();
+            yo.Longitude = longitude;
+            yo.Latitude = latitude;
+            
+            
+     
+
+
             // With the name and point set correctly
 
             // Then, return the instance of your TacoBell class
+
             // Since it conforms to ITrackable
 
             return null;
