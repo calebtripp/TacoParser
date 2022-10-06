@@ -32,7 +32,7 @@ namespace LoggingKata
             ITrackable location2 = null;
             double distance;
 
-            GeoPosition(location1, location2);
+           // GeoPosition(location1, location2);
         }
     }
 }
