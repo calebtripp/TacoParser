@@ -9,9 +9,7 @@ namespace LoggingKata.Test
         public void ShouldDoSomething()
         {       
             var tacoParser = new TacoParser();
-
             var actual = tacoParser.Parse("34.073638, -84.677017, Taco Bell Acwort...");
-
             Assert.NotNull(actual);
         }
 
@@ -25,9 +23,7 @@ namespace LoggingKata.Test
         public void ShouldParseLongitude(string line, double expected)
         {
             var tacoParserLong = new TacoParser();
-
             var actual = tacoParserLong.Parse(line).Location.Longitude; 
-
             Assert.Equal(expected, actual);  
         }
 
@@ -40,9 +36,7 @@ namespace LoggingKata.Test
         public void ShouldParseLatitude(string line, double expected)
         {
             var tacoParserLat = new TacoParser();
-
             var actual = tacoParserLat.Parse(line).Location.Latitude;
-
             Assert.Equal(expected, actual); 
         }
     }
